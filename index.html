@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -7,7 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -40,11 +43,15 @@
     </script>
     <style>
         /* Base Styles */
-        * { box-sizing: border-box; }
+        * {
+            box-sizing: border-box;
+        }
+
         html {
             scroll-behavior: smooth;
             -webkit-tap-highlight-color: transparent;
         }
+
         body {
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
@@ -52,36 +59,95 @@
 
         /* Animations */
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-15px) rotate(3deg); }
-        }
-        @keyframes shimmer {
-            0% { background-position: -200% center; }
-            100% { background-position: 200% center; }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.3), 0 0 40px rgba(212, 175, 55, 0.1); }
-            50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.5), 0 0 80px rgba(212, 175, 55, 0.2); }
-        }
-        @keyframes gradient-rotate {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        @keyframes sparkle {
-            0%, 100% { opacity: 0.4; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.2); }
-        }
-        @keyframes border-dance {
-            0%, 100% { border-color: rgba(212, 175, 55, 0.5); }
-            50% { border-color: rgba(212, 175, 55, 1); }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(3deg);
+            }
         }
 
-        .float-animation { animation: float 4s ease-in-out infinite; }
+        @keyframes shimmer {
+            0% {
+                background-position: -200% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.3), 0 0 40px rgba(212, 175, 55, 0.1);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(212, 175, 55, 0.5), 0 0 80px rgba(212, 175, 55, 0.2);
+            }
+        }
+
+        @keyframes gradient-rotate {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes sparkle {
+
+            0%,
+            100% {
+                opacity: 0.4;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes border-dance {
+
+            0%,
+            100% {
+                border-color: rgba(212, 175, 55, 0.5);
+            }
+
+            50% {
+                border-color: rgba(212, 175, 55, 1);
+            }
+        }
+
+        .float-animation {
+            animation: float 4s ease-in-out infinite;
+        }
+
         .shimmer-text {
             background: linear-gradient(90deg, #D4AF37 0%, #FFF8E7 25%, #D4AF37 50%, #FFF8E7 75%, #D4AF37 100%);
             background-size: 200% auto;
@@ -89,9 +155,18 @@
             -webkit-text-fill-color: transparent;
             animation: shimmer 2.5s linear infinite;
         }
-        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
-        .pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
-        .sparkle { animation: sparkle 2s ease-in-out infinite; }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .pulse-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        .sparkle {
+            animation: sparkle 2s ease-in-out infinite;
+        }
 
         /* Grand Background Pattern */
         .rangoli-pattern {
@@ -106,10 +181,11 @@
             position: relative;
             border: 3px solid transparent;
             background: linear-gradient(white, white) padding-box,
-                        linear-gradient(135deg, #D4AF37 0%, #F4E4BC 25%, #D4AF37 50%, #F4E4BC 75%, #D4AF37 100%) border-box;
+                linear-gradient(135deg, #D4AF37 0%, #F4E4BC 25%, #D4AF37 50%, #F4E4BC 75%, #D4AF37 100%) border-box;
             background-size: 100% 100%, 300% 300%;
             animation: gradient-rotate 4s ease infinite;
         }
+
         .ornate-frame::before,
         .ornate-frame::after {
             content: '❖';
@@ -118,13 +194,24 @@
             font-size: 1.5rem;
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
         }
-        .ornate-frame::before { top: -12px; left: 50%; transform: translateX(-50%); }
-        .ornate-frame::after { bottom: -12px; left: 50%; transform: translateX(-50%); }
+
+        .ornate-frame::before {
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .ornate-frame::after {
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
         /* Decorative Corner */
         .corner-decor {
             position: relative;
         }
+
         .corner-decor::before,
         .corner-decor::after {
             content: '';
@@ -134,12 +221,14 @@
             border: 2px solid #D4AF37;
             opacity: 0.5;
         }
+
         .corner-decor::before {
             top: -5px;
             left: -5px;
             border-right: none;
             border-bottom: none;
         }
+
         .corner-decor::after {
             bottom: -5px;
             right: -5px;
@@ -149,7 +238,7 @@
 
         /* Grand Card Style */
         .grand-card {
-            background: linear-gradient(145deg, rgba(255,255,255,0.95) 0%, rgba(255,248,231,0.95) 100%);
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 248, 231, 0.95) 100%);
             box-shadow:
                 0 25px 50px -12px rgba(128, 0, 32, 0.15),
                 0 0 0 1px rgba(212, 175, 55, 0.2),
@@ -164,6 +253,7 @@
             gap: 1rem;
             margin: 2rem 0;
         }
+
         .section-divider::before,
         .section-divider::after {
             content: '';
@@ -173,9 +263,17 @@
             background: linear-gradient(90deg, transparent, #D4AF37, transparent);
         }
 
-        .diya-glow { filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.7)); }
-        .telugu-text { font-family: 'Noto Sans Telugu', sans-serif; }
-        .hidden { display: none; }
+        .diya-glow {
+            filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.7));
+        }
+
+        .telugu-text {
+            font-family: 'Noto Sans Telugu', sans-serif;
+        }
+
+        .hidden {
+            display: none;
+        }
 
         /* Luxury Text Shadow */
         .luxury-text {
@@ -187,6 +285,7 @@
             position: relative;
             display: inline-block;
         }
+
         .golden-underline::after {
             content: '';
             position: absolute;
@@ -202,18 +301,22 @@
         .map-container {
             position: relative;
             width: 100%;
-            padding-bottom: 75%; /* 4:3 aspect ratio for mobile */
+            padding-bottom: 75%;
+            /* 4:3 aspect ratio for mobile */
             height: 0;
             overflow: hidden;
             border-radius: 0.75rem;
             border: 2px solid rgba(212, 175, 55, 0.3);
         }
+
         @media (min-width: 640px) {
             .map-container {
-                padding-bottom: 56.25%; /* 16:9 for larger screens */
+                padding-bottom: 56.25%;
+                /* 16:9 for larger screens */
                 border-radius: 1rem;
             }
         }
+
         .map-container iframe {
             position: absolute;
             top: 0;
@@ -229,52 +332,98 @@
                 opacity: 0.3 !important;
                 font-size: 2rem !important;
             }
-            .floating-decor.top-left { top: 5px !important; left: 5px !important; }
-            .floating-decor.top-right { top: 10px !important; right: 10px !important; }
-            .floating-decor.bottom-left { bottom: 10px !important; left: 10px !important; }
-            .floating-decor.bottom-right { bottom: 5px !important; right: 5px !important; }
+
+            .floating-decor.top-left {
+                top: 5px !important;
+                left: 5px !important;
+            }
+
+            .floating-decor.top-right {
+                top: 10px !important;
+                right: 10px !important;
+            }
+
+            .floating-decor.bottom-left {
+                bottom: 10px !important;
+                left: 10px !important;
+            }
+
+            .floating-decor.bottom-right {
+                bottom: 5px !important;
+                right: 5px !important;
+            }
         }
 
         /* Better text scaling for mobile */
         @media (max-width: 375px) {
-            .hero-name { font-size: 1.75rem !important; }
-            .section-title { font-size: 1.5rem !important; }
+            .hero-name {
+                font-size: 1.75rem !important;
+            }
+
+            .section-title {
+                font-size: 1.5rem !important;
+            }
         }
 
         /* Smooth section transitions */
         section {
             transition: opacity 0.5s ease-out, transform 0.5s ease-out;
         }
-        section.fade-in-up { opacity: 1 !important; }
+
+        section.fade-in-up {
+            opacity: 1 !important;
+        }
 
         /* Custom scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #FFF8E7; }
-        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #B8960C; }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #FFF8E7;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B8960C;
+        }
     </style>
 </head>
+
 <body class="bg-cream min-h-screen rangoli-pattern">
     <!-- Language Toggle -->
     <div class="fixed top-2 right-2 sm:top-4 sm:right-4 z-50">
-        <button id="langToggle" class="bg-maroon text-gold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-medium shadow-lg hover:bg-maroon-dark transition-all duration-300 flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base">
+        <button id="langToggle"
+            class="bg-maroon text-gold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-medium shadow-lg hover:bg-maroon-dark transition-all duration-300 flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base">
             <span id="langIcon">🇮🇳</span>
             <span id="langText">తెలుగు</span>
         </button>
     </div>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-3 sm:px-4 py-8 sm:py-12">
+    <section
+        class="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-3 sm:px-4 py-8 sm:py-12">
         <!-- Decorative Elements -->
-        <div class="floating-decor top-left absolute top-4 sm:top-10 left-2 sm:left-10 text-4xl sm:text-5xl lg:text-6xl float-animation opacity-70">💐</div>
-        <div class="floating-decor top-right absolute top-8 sm:top-20 right-4 sm:right-16 text-3xl sm:text-4xl lg:text-5xl float-animation opacity-70" style="animation-delay: 0.5s;">✨</div>
-        <div class="floating-decor bottom-left absolute bottom-8 sm:bottom-20 left-4 sm:left-16 text-3xl sm:text-4xl lg:text-5xl float-animation opacity-70" style="animation-delay: 1s;">✨</div>
-        <div class="floating-decor bottom-right absolute bottom-4 sm:bottom-10 right-2 sm:right-10 text-4xl sm:text-5xl lg:text-6xl float-animation opacity-70" style="animation-delay: 1.5s;">💐</div>
+        <div
+            class="floating-decor top-left absolute top-4 sm:top-10 left-2 sm:left-10 text-4xl sm:text-5xl lg:text-6xl float-animation opacity-70">
+            💐</div>
+        <div class="floating-decor top-right absolute top-8 sm:top-20 right-4 sm:right-16 text-3xl sm:text-4xl lg:text-5xl float-animation opacity-70"
+            style="animation-delay: 0.5s;">✨</div>
+        <div class="floating-decor bottom-left absolute bottom-8 sm:bottom-20 left-4 sm:left-16 text-3xl sm:text-4xl lg:text-5xl float-animation opacity-70"
+            style="animation-delay: 1s;">✨</div>
+        <div class="floating-decor bottom-right absolute bottom-4 sm:bottom-10 right-2 sm:right-10 text-4xl sm:text-5xl lg:text-6xl float-animation opacity-70"
+            style="animation-delay: 1.5s;">💐</div>
 
         <!-- Main Card -->
-        <div class="grand-card ornate-frame rounded-2xl sm:rounded-3xl p-5 xs:p-6 sm:p-10 md:p-14 max-w-3xl w-full text-center relative overflow-hidden pulse-glow mx-2">
+        <div
+            class="grand-card ornate-frame rounded-2xl sm:rounded-3xl p-5 xs:p-6 sm:p-10 md:p-14 max-w-3xl w-full text-center relative overflow-hidden pulse-glow mx-2">
             <!-- Decorative Top Border -->
-            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent">
+            </div>
 
             <!-- Top Ornament -->
             <div class="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-5 sparkle">💍</div>
@@ -287,27 +436,36 @@
             </div>
 
             <!-- Tagline -->
-            <p class="text-gold-dark italic text-sm sm:text-base mb-2 px-4 font-display" data-en="Two hearts, one beautiful journey" data-te="రెండు హృదయాలు, ఒక అందమైన ప్రయాణం">Two hearts, one beautiful journey</p>
+            <p class="text-gold-dark italic text-sm sm:text-base mb-2 px-4 font-display"
+                data-en="Two hearts, one beautiful journey" data-te="రెండు హృదయాలు, ఒక అందమైన ప్రయాణం">Two hearts, one
+                beautiful journey</p>
 
             <!-- Wedding Invitation -->
-            <p class="text-maroon font-semibold mb-3 tracking-[0.3em] uppercase text-xs sm:text-sm" data-en="Wedding Invitation" data-te="వివాహ ఆహ్వానం">Wedding Invitation</p>
+            <p class="text-maroon font-semibold mb-3 tracking-[0.3em] uppercase text-xs sm:text-sm"
+                data-en="Wedding Invitation" data-te="వివాహ ఆహ్వానం">Wedding Invitation</p>
 
             <!-- Invitation Text -->
-            <p class="text-gray-600 mb-5 sm:mb-8 font-body text-sm sm:text-base md:text-lg px-2 leading-relaxed" data-en="With immense joy and blessings of our families, we cordially invite you to celebrate the union of" data-te="మా కుటుంబాల ఆశీర్వాదాలతో, మా వివాహ వేడుకలో పాల్గొనమని మిమ్మల్ని ఆనందంగా ఆహ్వానిస్తున్నాము">
+            <p class="text-gray-600 mb-5 sm:mb-8 font-body text-sm sm:text-base md:text-lg px-2 leading-relaxed"
+                data-en="With immense joy and blessings of our families, we cordially invite you to celebrate the union of"
+                data-te="మా కుటుంబాల ఆశీర్వాదాలతో, మా వివాహ వేడుకలో పాల్గొనమని మిమ్మల్ని ఆనందంగా ఆహ్వానిస్తున్నాము">
                 With immense joy and blessings of our families, we cordially invite you to celebrate the union of
             </p>
 
             <!-- Couple Names -->
             <div class="my-6 sm:my-8 md:my-10">
-                <h1 class="hero-name font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-maroon mb-3 sm:mb-5 luxury-text golden-underline" style="-webkit-text-fill-color: #800020;">
+                <h1 class="hero-name font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-maroon mb-3 sm:mb-5 luxury-text golden-underline"
+                    style="-webkit-text-fill-color: #800020;">
                     <span data-en="Jai Prakash" data-te="జై ప్రకాష్">Jai Prakash</span>
                 </h1>
                 <div class="flex items-center justify-center gap-3 sm:gap-5 my-4 sm:my-6">
-                    <div class="h-px bg-gradient-to-r from-transparent via-gold to-transparent w-16 sm:w-24 md:w-32"></div>
+                    <div class="h-px bg-gradient-to-r from-transparent via-gold to-transparent w-16 sm:w-24 md:w-32">
+                    </div>
                     <span class="text-2xl sm:text-3xl md:text-4xl sparkle">💕</span>
-                    <div class="h-px bg-gradient-to-r from-transparent via-gold to-transparent w-16 sm:w-24 md:w-32"></div>
+                    <div class="h-px bg-gradient-to-r from-transparent via-gold to-transparent w-16 sm:w-24 md:w-32">
+                    </div>
                 </div>
-                <h1 class="hero-name font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-maroon luxury-text golden-underline" style="-webkit-text-fill-color: #800020;">
+                <h1 class="hero-name font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-maroon luxury-text golden-underline"
+                    style="-webkit-text-fill-color: #800020;">
                     <span data-en="Tejaswini" data-te="తేజస్విని">Tejaswini</span>
                 </h1>
             </div>
@@ -323,27 +481,36 @@
 
             <!-- Date -->
             <div class="relative inline-block">
-                <div class="absolute inset-0 bg-gradient-to-r from-gold via-gold-light to-gold opacity-20 blur-xl rounded-2xl"></div>
-                <div class="relative bg-gradient-to-br from-maroon via-maroon to-maroon-dark text-white py-4 sm:py-5 px-6 sm:px-8 md:px-10 rounded-xl sm:rounded-2xl shadow-lg border border-gold/30">
-                    <p class="text-gold-light text-xs sm:text-sm uppercase tracking-[0.2em] mb-2 font-medium" data-en="Save the Date" data-te="తేదీ గుర్తుంచుకోండి">Save the Date</p>
-                    <p class="text-2xl sm:text-3xl md:text-4xl font-display font-bold">28<sup>th</sup> & 30<sup>th</sup></p>
-                    <p class="text-lg sm:text-xl md:text-2xl font-display mt-1" data-en="January 2026" data-te="జనవరి 2026">January 2026</p>
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-gold via-gold-light to-gold opacity-20 blur-xl rounded-2xl">
+                </div>
+                <div
+                    class="relative bg-gradient-to-br from-maroon via-maroon to-maroon-dark text-white py-4 sm:py-5 px-6 sm:px-8 md:px-10 rounded-xl sm:rounded-2xl shadow-lg border border-gold/30">
+                    <p class="text-gold-light text-xs sm:text-sm uppercase tracking-[0.2em] mb-2 font-medium"
+                        data-en="Save the Date" data-te="తేదీ గుర్తుంచుకోండి">Save the Date</p>
+                    <p class="text-2xl sm:text-3xl md:text-4xl font-display font-bold">28<sup>th</sup> & 30<sup>th</sup>
+                    </p>
+                    <p class="text-lg sm:text-xl md:text-2xl font-display mt-1" data-en="January 2026"
+                        data-te="జనవరి 2026">January 2026</p>
                 </div>
             </div>
 
             <!-- Decorative Bottom Border -->
-            <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent">
+            </div>
 
             <!-- Scroll Indicator -->
             <div class="mt-4 sm:mt-8 animate-bounce">
-                <p class="text-gray-500 text-xs sm:text-sm mb-1 sm:mb-2" data-en="Scroll for details" data-te="వివరాల కోసం స్క్రోల్ చేయండి">Scroll for details</p>
+                <p class="text-gray-500 text-xs sm:text-sm mb-1 sm:mb-2" data-en="Scroll for details"
+                    data-te="వివరాల కోసం స్క్రోల్ చేయండి">Scroll for details</p>
                 <span class="text-xl sm:text-2xl">↓</span>
             </div>
         </div>
     </section>
 
     <!-- Countdown Section -->
-    <section class="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-maroon via-maroon to-maroon-dark text-white relative overflow-hidden">
+    <section
+        class="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-maroon via-maroon to-maroon-dark text-white relative overflow-hidden">
         <!-- Decorative Background Elements -->
         <div class="absolute inset-0 opacity-10">
             <div class="absolute top-10 left-10 text-6xl">✦</div>
@@ -357,28 +524,42 @@
                 <span class="text-gold text-xl sparkle">✦</span>
                 <div class="h-px bg-gradient-to-l from-transparent to-gold w-12 sm:w-20"></div>
             </div>
-            <h2 class="section-title font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-8 sm:mb-10 text-gold-light px-2" data-en="Counting Down to Our Special Day" data-te="మా ప్రత్యేక రోజు కోసం లెక్కింపు">
+            <h2 class="section-title font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-8 sm:mb-10 text-gold-light px-2"
+                data-en="Counting Down to Our Special Day" data-te="మా ప్రత్యేక రోజు కోసం లెక్కింపు">
                 Counting Down to Our Special Day
             </h2>
-            <div id="countdown" class="flex justify-center items-center gap-2 xs:gap-3 sm:gap-4 md:gap-6 lg:gap-8 max-w-4xl mx-auto">
-                <div class="bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl md:rounded-2xl p-2 xs:p-3 sm:p-4 md:p-6 border border-gold/20 shadow-lg flex-1 max-w-[85px] sm:max-w-[120px] md:max-w-[150px]">
-                    <span id="days" class="text-xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gold font-display block">00</span>
-                    <p class="text-gold-light mt-1 sm:mt-2 text-[10px] xs:text-xs sm:text-sm md:text-base uppercase tracking-wider" data-en="Days" data-te="రోజులు">Days</p>
+            <div id="countdown"
+                class="flex justify-center items-center gap-2 xs:gap-3 sm:gap-4 md:gap-6 lg:gap-8 max-w-4xl mx-auto">
+                <div
+                    class="bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl md:rounded-2xl p-2 xs:p-3 sm:p-4 md:p-6 border border-gold/20 shadow-lg flex-1 max-w-[85px] sm:max-w-[120px] md:max-w-[150px]">
+                    <span id="days"
+                        class="text-xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gold font-display block">00</span>
+                    <p class="text-gold-light mt-1 sm:mt-2 text-[10px] xs:text-xs sm:text-sm md:text-base uppercase tracking-wider"
+                        data-en="Days" data-te="రోజులు">Days</p>
                 </div>
                 <span class="text-gold text-lg sm:text-2xl md:text-3xl font-light">:</span>
-                <div class="bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl md:rounded-2xl p-2 xs:p-3 sm:p-4 md:p-6 border border-gold/20 shadow-lg flex-1 max-w-[85px] sm:max-w-[120px] md:max-w-[150px]">
-                    <span id="hours" class="text-xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gold font-display block">00</span>
-                    <p class="text-gold-light mt-1 sm:mt-2 text-[10px] xs:text-xs sm:text-sm md:text-base uppercase tracking-wider" data-en="Hours" data-te="గంటలు">Hours</p>
+                <div
+                    class="bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl md:rounded-2xl p-2 xs:p-3 sm:p-4 md:p-6 border border-gold/20 shadow-lg flex-1 max-w-[85px] sm:max-w-[120px] md:max-w-[150px]">
+                    <span id="hours"
+                        class="text-xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gold font-display block">00</span>
+                    <p class="text-gold-light mt-1 sm:mt-2 text-[10px] xs:text-xs sm:text-sm md:text-base uppercase tracking-wider"
+                        data-en="Hours" data-te="గంటలు">Hours</p>
                 </div>
                 <span class="text-gold text-lg sm:text-2xl md:text-3xl font-light">:</span>
-                <div class="bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl md:rounded-2xl p-2 xs:p-3 sm:p-4 md:p-6 border border-gold/20 shadow-lg flex-1 max-w-[85px] sm:max-w-[120px] md:max-w-[150px]">
-                    <span id="minutes" class="text-xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gold font-display block">00</span>
-                    <p class="text-gold-light mt-1 sm:mt-2 text-[10px] xs:text-xs sm:text-sm md:text-base uppercase tracking-wider" data-en="Mins" data-te="ని.">Mins</p>
+                <div
+                    class="bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl md:rounded-2xl p-2 xs:p-3 sm:p-4 md:p-6 border border-gold/20 shadow-lg flex-1 max-w-[85px] sm:max-w-[120px] md:max-w-[150px]">
+                    <span id="minutes"
+                        class="text-xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gold font-display block">00</span>
+                    <p class="text-gold-light mt-1 sm:mt-2 text-[10px] xs:text-xs sm:text-sm md:text-base uppercase tracking-wider"
+                        data-en="Mins" data-te="ని.">Mins</p>
                 </div>
                 <span class="text-gold text-lg sm:text-2xl md:text-3xl font-light">:</span>
-                <div class="bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl md:rounded-2xl p-2 xs:p-3 sm:p-4 md:p-6 border border-gold/20 shadow-lg flex-1 max-w-[85px] sm:max-w-[120px] md:max-w-[150px]">
-                    <span id="seconds" class="text-xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gold font-display block">00</span>
-                    <p class="text-gold-light mt-1 sm:mt-2 text-[10px] xs:text-xs sm:text-sm md:text-base uppercase tracking-wider" data-en="Secs" data-te="సె.">Secs</p>
+                <div
+                    class="bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl md:rounded-2xl p-2 xs:p-3 sm:p-4 md:p-6 border border-gold/20 shadow-lg flex-1 max-w-[85px] sm:max-w-[120px] md:max-w-[150px]">
+                    <span id="seconds"
+                        class="text-xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gold font-display block">00</span>
+                    <p class="text-gold-light mt-1 sm:mt-2 text-[10px] xs:text-xs sm:text-sm md:text-base uppercase tracking-wider"
+                        data-en="Secs" data-te="సె.">Secs</p>
                 </div>
             </div>
         </div>
@@ -394,31 +575,49 @@
                     <span class="text-gold text-xl sparkle">❖</span>
                     <div class="h-px bg-gradient-to-l from-transparent to-gold w-12 sm:w-24"></div>
                 </div>
-                <h2 class="section-title font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-maroon luxury-text" data-en="Wedding Events" data-te="వివాహ వేడుకలు">
+                <h2 class="section-title font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-maroon luxury-text"
+                    data-en="Wedding Events" data-te="వివాహ వేడుకలు">
                     Wedding Events
                 </h2>
-                <p class="text-gray-500 mt-3 text-sm sm:text-base" data-en="Join us in celebrating our special moments" data-te="మా ప్రత్యేక క్షణాలను జరుపుకోవడంలో మాతో చేరండి">Join us in celebrating our special moments</p>
+                <p class="text-gray-500 mt-3 text-sm sm:text-base" data-en="Join us in celebrating our special moments"
+                    data-te="మా ప్రత్యేక క్షణాలను జరుపుకోవడంలో మాతో చేరండి">Join us in celebrating our special moments
+                </p>
             </div>
 
             <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
                 <!-- Wedding Ceremony -->
-                <div class="bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 border border-gold/10 hover:shadow-2xl hover:shadow-gold/10">
-                    <div class="bg-gradient-to-br from-gold via-gold to-gold-dark p-5 sm:p-7 text-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.2),transparent)]"></div>
+                <div
+                    class="bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 border border-gold/10 hover:shadow-2xl hover:shadow-gold/10">
+                    <div
+                        class="bg-gradient-to-br from-gold via-gold to-gold-dark p-5 sm:p-7 text-center relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.2),transparent)]">
+                        </div>
                         <span class="text-4xl sm:text-5xl md:text-6xl relative z-10">💒</span>
-                        <h3 class="font-display text-xl sm:text-2xl md:text-3xl text-maroon-dark mt-3 relative z-10" data-en="Wedding Ceremony" data-te="వివాహ వేడుక">Wedding Ceremony</h3>
-                        <p class="text-maroon font-medium text-sm sm:text-base relative z-10" data-en="Marriage Function" data-te="పెళ్ళి వేడుక">Marriage Function</p>
+                        <h3 class="font-display text-xl sm:text-2xl md:text-3xl text-maroon-dark mt-3 relative z-10"
+                            data-en="Wedding Ceremony" data-te="వివాహ వేడుక">Wedding Ceremony</h3>
+                        <p class="text-maroon font-medium text-sm sm:text-base relative z-10"
+                            data-en="Marriage Function" data-te="పెళ్ళి వేడుక">Marriage Function</p>
                     </div>
                     <div class="p-4 sm:p-6">
                         <div class="text-center mb-4">
-                            <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-wide" data-en="Date & Time" data-te="తేదీ & సమయం">Date & Time</p>
-                            <p class="text-base sm:text-lg md:text-xl font-semibold text-maroon">28<sup>th</sup> <span data-en="January 2026" data-te="జనవరి 2026">January 2026</span></p>
-                            <p class="text-gold-dark font-medium text-sm sm:text-base" data-en="10:00 AM Onwards" data-te="ఉదయం 10:00 గంటల నుండి">10:00 AM Onwards</p>
+                            <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-wide" data-en="Date & Time"
+                                data-te="తేదీ & సమయం">Date & Time</p>
+                            <p class="text-base sm:text-lg md:text-xl font-semibold text-maroon">28<sup>th</sup> <span
+                                    data-en="January 2026" data-te="జనవరి 2026">January 2026</span></p>
+                            <p class="text-gold-dark font-medium text-sm sm:text-base" data-en="10 AM onwards"
+                                data-te="ఉదయం 10 గంటలు">10 AM onwards</p>
                         </div>
                         <div class="border-t pt-4 text-center">
-                            <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-wide" data-en="Venue" data-te="వేదిక">Venue</p>
-                            <p class="text-base sm:text-lg font-semibold text-maroon" data-en="Jayalakshmi Function Hall" data-te="జయలక్ష్మి ఫంక్షన్ హాల్">Jayalakshmi Function Hall</p>
-                            <p class="text-gray-600 text-sm sm:text-base" data-en="Rajavommangi, Alluri Seetharama Raju District" data-te="రాజవొమ్మంగి, అల్లూరి సీతారామరాజు జిల్లా">Rajavommangi, Alluri Seetharama Raju District</p>
+                            <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-wide" data-en="Venue"
+                                data-te="వేదిక">Venue</p>
+                            <p class="text-base sm:text-lg font-semibold text-maroon"
+                                data-en="Jayalakshmi Function Hall" data-te="జయలక్ష్మి ఫంక్షన్ హాల్">Jayalakshmi
+                                Function Hall</p>
+                            <p class="text-gray-600 text-sm sm:text-base"
+                                data-en="Rajavommangi, Alluri Seetharama Raju District"
+                                data-te="రాజవొమ్మంగి, అల్లూరి సీతారామరాజు జిల్లా">Rajavommangi, Alluri Seetharama Raju
+                                District</p>
                         </div>
 
                         <!-- Embedded Map - Rajavommangi -->
@@ -426,40 +625,52 @@
                             <div class="map-container shadow-lg">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3799.0!2d81.8397!3d17.7089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3947c3c43a1d4f%3A0x1b8a7c0a2b8b4c0a!2sRajavommangi%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1699887272545!5m2!1sen!2sin"
-                                    allowfullscreen=""
-                                    loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade">
+                                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                                 </iframe>
                             </div>
-                            <a href="https://maps.app.goo.gl/nVHzf4P6KTAa84j17"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="inline-flex items-center justify-center gap-2 mt-4 bg-maroon text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full hover:bg-maroon-dark transition-colors w-full sm:w-auto text-sm sm:text-base">
+                            <a href="https://maps.app.goo.gl/nVHzf4P6KTAa84j17" target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-2 mt-4 bg-maroon text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full hover:bg-maroon-dark transition-colors w-full sm:w-auto text-sm sm:text-base">
                                 <span>📍</span>
-                                <span data-en="Open in Google Maps" data-te="Google Maps లో తెరవండి">Open in Google Maps</span>
+                                <span data-en="Open in Google Maps" data-te="Google Maps లో తెరవండి">Open in Google
+                                    Maps</span>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Reception -->
-                <div class="bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 border border-maroon/10 hover:shadow-2xl hover:shadow-maroon/10">
-                    <div class="bg-gradient-to-br from-maroon via-maroon to-maroon-dark p-5 sm:p-7 text-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent)]"></div>
+                <div
+                    class="bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 border border-maroon/10 hover:shadow-2xl hover:shadow-maroon/10">
+                    <div
+                        class="bg-gradient-to-br from-maroon via-maroon to-maroon-dark p-5 sm:p-7 text-center relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent)]">
+                        </div>
                         <span class="text-4xl sm:text-5xl md:text-6xl relative z-10">🎊</span>
-                        <h3 class="font-display text-xl sm:text-2xl md:text-3xl text-gold-light mt-3 relative z-10" data-en="Grand Reception" data-te="రిసెప్షన్ వేడుక">Grand Reception</h3>
-                        <p class="text-gold font-medium text-sm sm:text-base relative z-10" data-en="Dinner & Celebrations" data-te="విందు & వేడుకలు">Dinner & Celebrations</p>
+                        <h3 class="font-display text-xl sm:text-2xl md:text-3xl text-gold-light mt-3 relative z-10"
+                            data-en="Grand Reception" data-te="రిసెప్షన్ వేడుక">Grand Reception</h3>
+                        <p class="text-gold font-medium text-sm sm:text-base relative z-10"
+                            data-en="Lunch & Celebrations" data-te="భోజనం & వేడుకలు">Lunch & Celebrations</p>
                     </div>
                     <div class="p-4 sm:p-6">
                         <div class="text-center mb-4">
-                            <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-wide" data-en="Date & Time" data-te="తేదీ & సమయం">Date & Time</p>
-                            <p class="text-base sm:text-lg md:text-xl font-semibold text-maroon">30<sup>th</sup> <span data-en="January 2026" data-te="జనవరి 2026">January 2026</span></p>
-                            <p class="text-gold-dark font-medium text-sm sm:text-base" data-en="Evening: 6:30 PM Onwards" data-te="సాయంత్రం: 6:30 PM నుండి">Evening: 6:30 PM Onwards</p>
+                            <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-wide" data-en="Date & Time"
+                                data-te="తేదీ & సమయం">Date & Time</p>
+                            <p class="text-base sm:text-lg md:text-xl font-semibold text-maroon">30<sup>th</sup> <span
+                                    data-en="January 2026" data-te="జనవరి 2026">January 2026</span></p>
+                            <p class="text-gold-dark font-medium text-sm sm:text-base" data-en="10 AM onwards"
+                                data-te="ఉదయం 10 గంటలు">10 AM onwards</p>
                         </div>
                         <div class="border-t pt-4 text-center">
-                            <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-wide" data-en="Venue" data-te="వేదిక">Venue</p>
-                            <p class="text-base sm:text-lg font-semibold text-maroon" data-en="Hotel Sun Square" data-te="హోటల్ సన్ స్క్వేర్">Hotel Sun Square</p>
-                            <p class="text-gray-600 text-sm sm:text-base" data-en="Near District Office, Gandhi Nagar, Vijayawada" data-te="జిల్లా కార్యాలయం సమీపంలో, గాంధీ నగర్, విజయవాడ">Near District Office, Gandhi Nagar, Vijayawada</p>
+                            <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-wide" data-en="Venue"
+                                data-te="వేదిక">Venue</p>
+                            <p class="text-base sm:text-lg font-semibold text-maroon" data-en="Hotel Sun Square"
+                                data-te="హోటల్ సన్ స్క్వేర్">Hotel Sun Square</p>
+                            <p class="text-gray-600 text-sm sm:text-base"
+                                data-en="Near District Office, Gandhi Nagar, Vijayawada"
+                                data-te="జిల్లా కార్యాలయం సమీపంలో, గాంధీ నగర్, విజయవాడ">Near District Office, Gandhi
+                                Nagar, Vijayawada</p>
                         </div>
 
                         <!-- Embedded Map - Vijayawada -->
@@ -467,17 +678,15 @@
                             <div class="map-container shadow-lg">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.0!2d80.6480!3d16.5062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fb5a8c5a1d4f%3A0x1b8a7c0a2b8b4c0a!2sGandhi%20Nagar%2C%20Vijayawada!5e0!3m2!1sen!2sin!4v1699887345678!5m2!1sen!2sin"
-                                    allowfullscreen=""
-                                    loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade">
+                                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                                 </iframe>
                             </div>
-                            <a href="https://maps.app.goo.gl/R5FARBMsu8WH3Lti7"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="inline-flex items-center justify-center gap-2 mt-4 bg-gold text-maroon-dark px-4 sm:px-6 py-2 sm:py-2.5 rounded-full hover:bg-gold-dark transition-colors w-full sm:w-auto text-sm sm:text-base">
+                            <a href="https://maps.app.goo.gl/R5FARBMsu8WH3Lti7" target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-2 mt-4 bg-gold text-maroon-dark px-4 sm:px-6 py-2 sm:py-2.5 rounded-full hover:bg-gold-dark transition-colors w-full sm:w-auto text-sm sm:text-base">
                                 <span>📍</span>
-                                <span data-en="Open in Google Maps" data-te="Google Maps లో తెరవండి">Open in Google Maps</span>
+                                <span data-en="Open in Google Maps" data-te="Google Maps లో తెరవండి">Open in Google
+                                    Maps</span>
                             </a>
                         </div>
                     </div>
@@ -487,7 +696,8 @@
     </section>
 
     <!-- Our Story Section -->
-    <section class="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-cream-dark via-cream to-cream-dark px-3 sm:px-4 relative overflow-hidden">
+    <section
+        class="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-cream-dark via-cream to-cream-dark px-3 sm:px-4 relative overflow-hidden">
         <!-- Background Decoration -->
         <div class="absolute top-10 left-10 text-8xl text-gold/5 font-display">"</div>
         <div class="absolute bottom-10 right-10 text-8xl text-gold/5 font-display rotate-180">"</div>
@@ -500,7 +710,8 @@
                     <span class="text-gold text-xl sparkle">❖</span>
                     <div class="h-px bg-gradient-to-l from-transparent to-gold w-12 sm:w-24"></div>
                 </div>
-                <h2 class="section-title font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-maroon luxury-text" data-en="Our Story" data-te="మా కథ">
+                <h2 class="section-title font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-maroon luxury-text"
+                    data-en="Our Story" data-te="మా కథ">
                     Our Story
                 </h2>
             </div>
@@ -509,11 +720,32 @@
                 <div class="flex justify-center gap-4 mb-5 sm:mb-8">
                     <span class="text-4xl sm:text-5xl sparkle">💕</span>
                 </div>
-                <p class="text-gold-dark italic text-base sm:text-lg md:text-xl mb-6 font-display" data-en="\"Sometimes the best things are arranged first and loved later...\"" data-te="\"కొన్నిసార్లు ఉత్తమ విషయాలు ముందుగా ఏర్పాటు చేయబడి తర్వాత ప్రేమించబడతాయి...\"">"Sometimes the best things are arranged first and loved later..."</p>
-                <p class="text-gray-600 leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl" data-en="Once upon a time, my family, her family, and destiny had a meeting—and I was informed of the decision later 😄. It was an arranged marriage, simple and straightforward. We met politely, spoke carefully, and smiled awkwardly. Then I noticed her cuteness and innocence, and just like that, the arrangement started to feel perfect. Two souls brought together by our families and fate. With everyone's blessings, I'm now getting married to a beautiful woman—proof that sometimes the best things are arranged first and loved later. ❤️" data-te="ఒకప్పుడు, నా కుటుంబం, ఆమె కుటుంబం మరియు విధి ఒక సమావేశం నిర్వహించాయి—మరియు నాకు ఆ నిర్ణయం తర్వాత తెలిసింది 😄. ఇది ఒక అరేంజ్డ్ మ్యారేజ్, సింపుల్ మరియు స్ట్రెయిట్‌ఫార్వర్డ్. మేము మర్యాదగా కలిశాము, జాగ్రత్తగా మాట్లాడాము, మరియు ఇబ్బందిగా నవ్వాము. అప్పుడు నేను ఆమె అమాయకత్వం మరియు క్యూట్‌నెస్ గమనించాను, అలా ఆ ఏర్పాటు పర్ఫెక్ట్‌గా అనిపించడం మొదలైంది. మా కుటుంబాలు మరియు విధి కలిపిన రెండు ఆత్మలు. అందరి ఆశీర్వాదాలతో, నేను ఇప్పుడు ఒక అందమైన మహిళను వివాహం చేసుకుంటున్నాను—కొన్నిసార్లు ఉత్తమ విషయాలు ముందుగా ఏర్పాటు చేయబడి తర్వాత ప్రేమించబడతాయి అనడానికి రుజువు. ❤️">
-                    Once upon a time, my family, her family, and destiny had a meeting—and I was informed of the decision later 😄.<br><br>
-                    It was an arranged marriage, simple and straightforward. We met politely, spoke carefully, and smiled awkwardly. Then I noticed her <strong class="text-maroon">cuteness and innocence</strong>, and just like that, the arrangement started to feel perfect.<br><br>
-                    Two souls brought together by our families and fate. With everyone's blessings, I'm now getting married to a <strong class="text-maroon">beautiful woman</strong>—proof that sometimes the best things are arranged first and loved later. ❤️
+                <p class="text-gold-dark italic text-base sm:text-lg md:text-xl mb-6 font-display" data-en="\" Sometimes
+                    the best things are arranged first and loved later...\"" data-te="\" కొన్నిసార్లు ఉత్తమ విషయాలు
+                    ముందుగా ఏర్పాటు చేయబడి తర్వాత ప్రేమించబడతాయి...\"">"Sometimes the best things are arranged first and
+                    loved later..."</p>
+                <p class="text-gray-600 leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl"
+                    data-en="Once upon a time, my family, her family, and destiny had a meeting—and I was informed of the decision later 😄. It was an arranged marriage, simple and straightforward. We met politely, spoke carefully, and smiled awkwardly. Then I noticed her cuteness and innocence, and just like that, the arrangement started to feel perfect. Two souls brought together by our families and fate. With everyone's blessings, I'm now getting married to a beautiful woman—proof that sometimes the best things are arranged first and loved later. ❤️"
+                    data-te="మా కుటుంబాల ఆశీర్వాదాలతో,
+ఒక అందమైన అరేంజ్డ్ మ్యారేజ్ ద్వారా
+మా జీవితాల కొత్త అధ్యాయం మొదలవుతోంది.
+
+మేము కలిసాం, మాట్లాడాం,
+ఆమె క్యూట్‌నెస్‌, అమాయకత్వం నచ్చాయి,
+అలా ఈ బంధం సహజంగా ముందుకు సాగింది.
+
+అందరి ఆశీర్వాదాలతో
+ఇప్పుడు మా పెళ్లి జరగబోతోంది.
+ఈ ఆనందక్షణంలో మీరు కూడా భాగస్వాములు కావాలని కోరుకుంటున్నాం.
+">
+                    Once upon a time, my family, her family, and destiny had a meeting—and I was informed of the
+                    decision later 😄.<br><br>
+                    It was an arranged marriage, simple and straightforward. We met politely, spoke carefully, and
+                    smiled awkwardly. Then I noticed her <strong class="text-maroon">cuteness and innocence</strong>,
+                    and just like that, the arrangement started to feel perfect.<br><br>
+                    Two souls brought together by our families and fate. With everyone's blessings, I'm now getting
+                    married to a <strong class="text-maroon">beautiful woman</strong>—proof that sometimes the best
+                    things are arranged first and loved later. ❤️
                 </p>
                 <div class="flex justify-center items-center gap-3 mt-8 sm:mt-10">
                     <div class="h-px bg-gradient-to-r from-transparent to-gold w-8 sm:w-12"></div>
@@ -536,34 +768,53 @@
                     <span class="text-gold text-xl sparkle">❖</span>
                     <div class="h-px bg-gradient-to-l from-transparent to-gold w-12 sm:w-24"></div>
                 </div>
-                <h2 class="section-title font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-maroon luxury-text" data-en="Our Families" data-te="మా కుటుంబాలు">
+                <h2 class="section-title font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-maroon luxury-text"
+                    data-en="Our Families" data-te="మా కుటుంబాలు">
                     Our Families
                 </h2>
             </div>
 
             <div class="grid sm:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
                 <!-- Groom's Family -->
-                <div class="grand-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 text-center border-2 border-gold/30 transform hover:scale-[1.02] transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
-                    <span class="text-4xl sm:text-5xl md:text-6xl">🤵</span>
-                    <h3 class="font-display text-xl sm:text-2xl md:text-3xl text-maroon mt-4 mb-3 luxury-text" data-en="Jai Prakash" data-te="జై ప్రకాష్">Jai Prakash</h3>
-                    <div class="space-y-2 text-gray-600">
-                        <p><span class="font-semibold text-sm sm:text-base text-gold-dark" data-en="S/o" data-te="కుమారుడు">S/o</span></p>
-                        <p class="text-base sm:text-lg md:text-xl text-maroon font-medium" data-en="Mr. Satyanarayana & Mrs. Eswaramma" data-te="శ్రీ సత్యనారాయణ & శ్రీమతి ఈశ్వరమ్మ">Mr. Satyanarayana & Mrs. Eswaramma</p>
+                <div
+                    class="grand-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 text-center border-2 border-gold/30 transform hover:scale-[1.02] transition-all duration-300 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent">
                     </div>
-                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+                    <span class="text-4xl sm:text-5xl md:text-6xl">🤵</span>
+                    <h3 class="font-display text-xl sm:text-2xl md:text-3xl text-maroon mt-4 mb-3 luxury-text"
+                        data-en="Jai Prakash" data-te="జై ప్రకాష్">Jai Prakash</h3>
+                    <div class="space-y-2 text-gray-600">
+                        <p><span class="font-semibold text-sm sm:text-base text-gold-dark" data-en="S/o"
+                                data-te="కుమారుడు">S/o</span></p>
+                        <p class="text-base sm:text-lg md:text-xl text-maroon font-medium"
+                            data-en="Mr. Satyanarayana & Mrs. Eswaramma" data-te="శ్రీ సత్యనారాయణ & శ్రీమతి ఈశ్వరమ్మ">
+                            Mr. Satyanarayana & Mrs. Eswaramma</p>
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent">
+                    </div>
                 </div>
 
                 <!-- Bride's Family -->
-                <div class="grand-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 text-center border-2 border-maroon/30 transform hover:scale-[1.02] transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-maroon to-transparent"></div>
-                    <span class="text-4xl sm:text-5xl md:text-6xl">👰</span>
-                    <h3 class="font-display text-xl sm:text-2xl md:text-3xl text-maroon mt-4 mb-3 luxury-text" data-en="Tejaswini" data-te="తేజస్విని">Tejaswini</h3>
-                    <div class="space-y-2 text-gray-600">
-                        <p><span class="font-semibold text-sm sm:text-base text-gold-dark" data-en="D/o" data-te="కుమార్తె">D/o</span></p>
-                        <p class="text-base sm:text-lg md:text-xl text-maroon font-medium" data-en="Mr. Krishnamurthy & Mrs. Vijaya" data-te="శ్రీ కృష్ణమూర్తి & శ్రీమతి విజయ">Mr. Krishnamurthy & Mrs. Vijaya</p>
+                <div
+                    class="grand-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 text-center border-2 border-maroon/30 transform hover:scale-[1.02] transition-all duration-300 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-maroon to-transparent">
                     </div>
-                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-maroon to-transparent"></div>
+                    <span class="text-4xl sm:text-5xl md:text-6xl">👰</span>
+                    <h3 class="font-display text-xl sm:text-2xl md:text-3xl text-maroon mt-4 mb-3 luxury-text"
+                        data-en="Tejaswini" data-te="తేజస్విని">Tejaswini</h3>
+                    <div class="space-y-2 text-gray-600">
+                        <p><span class="font-semibold text-sm sm:text-base text-gold-dark" data-en="D/o"
+                                data-te="కుమార్తె">D/o</span></p>
+                        <p class="text-base sm:text-lg md:text-xl text-maroon font-medium"
+                            data-en="Mr. Krishnamurthy & Mrs. Vijaya" data-te="శ్రీ కృష్ణమూర్తి & శ్రీమతి విజయ">Mr.
+                            Krishnamurthy & Mrs. Vijaya</p>
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-maroon to-transparent">
+                    </div>
                 </div>
             </div>
         </div>
@@ -572,68 +823,76 @@
     <!-- RSVP Section -->
     <section class="py-10 sm:py-12 md:py-16 bg-gradient-to-b from-maroon to-maroon-dark text-white px-3 sm:px-4">
         <div class="container mx-auto max-w-xl text-center">
-            <h2 class="section-title font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gold-light mb-3 sm:mb-4" data-en="RSVP" data-te="దయచేసి మీ హాజరు నిర్ధారించండి">
+            <h2 class="section-title font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gold-light mb-3 sm:mb-4"
+                data-en="RSVP" data-te="దయచేసి మీ హాజరు నిర్ధారించండి">
                 RSVP
             </h2>
-            <p class="text-gold-light/80 mb-6 sm:mb-8 text-sm sm:text-base px-2" data-en="We would be honored by your presence. Please let us know if you can attend." data-te="మీ హాజరుతో మేము గౌరవించబడతాము. మీరు హాజరు కాగలరా అని దయచేసి తెలియజేయండి.">
+            <p class="text-gold-light/80 mb-6 sm:mb-8 text-sm sm:text-base px-2"
+                data-en="We would be honored by your presence. Please let us know if you can attend."
+                data-te="మీ హాజరుతో మేము గౌరవించబడతాము. మీరు హాజరు కాగలరా అని దయచేసి తెలియజేయండి.">
                 We would be honored by your presence. Please let us know if you can attend.
             </p>
 
-            <form id="rsvpForm" class="bg-white/10 backdrop-blur rounded-2xl sm:rounded-3xl p-4 xs:p-5 sm:p-6 md:p-8">
-                <div class="space-y-3 sm:space-y-4">
-                    <input type="text" placeholder="Your Name / మీ పేరు" class="w-full px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white/20 border border-gold/30 text-white placeholder-gold-light/70 focus:outline-none focus:border-gold text-sm sm:text-base">
-                    <input type="tel" placeholder="Phone Number / ఫోన్ నంబర్" class="w-full px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white/20 border border-gold/30 text-white placeholder-gold-light/70 focus:outline-none focus:border-gold text-sm sm:text-base">
-                    <select class="w-full px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white/20 border border-gold/30 text-white focus:outline-none focus:border-gold text-sm sm:text-base">
-                        <option value="" class="text-maroon" data-en="Number of Guests" data-te="అతిథుల సంఖ్య">Number of Guests</option>
-                        <option value="1" class="text-maroon">1</option>
-                        <option value="2" class="text-maroon">2</option>
-                        <option value="3" class="text-maroon">3</option>
-                        <option value="4" class="text-maroon">4</option>
-                        <option value="5+" class="text-maroon">5+</option>
-                    </select>
-                    <div class="flex flex-col xs:flex-row gap-3 sm:gap-4 justify-center pt-2 sm:pt-4">
-                        <button type="button" class="rsvp-btn bg-gold text-maroon-dark px-5 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold hover:bg-gold-light transition-colors text-sm sm:text-base" data-response="attending">
-                            <span data-en="Joyfully Accept" data-te="సంతోషంగా అంగీకరిస్తున్నాము">Joyfully Accept</span> ✓
-                        </button>
-                        <button type="button" class="rsvp-btn bg-white/20 text-white px-5 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold hover:bg-white/30 transition-colors text-sm sm:text-base" data-response="regret">
-                            <span data-en="Regretfully Decline" data-te="క్షమించండి, రాలేము">Regretfully Decline</span>
-                        </button>
-                    </div>
-                </div>
-            </form>
+            <!-- Mobile: Show button link -->
+            <div class="block sm:hidden">
+                <a href="https://forms.gle/9K9SJQFqwCkYzdVD6" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-3 bg-gold text-maroon-dark px-8 py-4 rounded-full font-semibold hover:bg-gold-light transition-all duration-300 text-base shadow-lg">
+                    <span class="text-xl">📝</span>
+                    <span data-en="Fill RSVP Form" data-te="RSVP ఫారం నింపండి">Fill RSVP Form</span>
+                </a>
+            </div>
+            <!-- Desktop: Show embedded form -->
+            <div class="hidden sm:block bg-white rounded-3xl overflow-hidden shadow-xl max-w-lg mx-auto">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSd8eNkMdIHZb5LYnw9hyyWCPrF_j0K8GoUZxROtQhLNXQKLGA/viewform?embedded=true"
+                    width="100%"
+                    height="450"
+                    frameborder="0"
+                    marginheight="0"
+                    marginwidth="0"
+                    class="w-full">
+                    Loading…
+                </iframe>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section class="py-10 sm:py-12 md:py-16 px-3 sm:px-4 bg-cream-dark">
         <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="section-title font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl text-maroon mb-6 sm:mb-8" data-en="Contact Us" data-te="మమ్మల్ని సంప్రదించండి">
+            <h2 class="section-title font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl text-maroon mb-6 sm:mb-8"
+                data-en="Contact Us" data-te="మమ్మల్ని సంప్రదించండి">
                 Contact Us
             </h2>
 
             <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
                 <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6">
                     <span class="text-2xl sm:text-3xl">📞</span>
-                    <h3 class="font-semibold text-maroon mt-2 text-sm sm:text-base" data-en="Groom's Side" data-te="వరుడి వైపు">Groom's Side</h3>
+                    <h3 class="font-semibold text-maroon mt-2 text-sm sm:text-base" data-en="Groom's Side"
+                        data-te="వరుడి వైపు">Groom's Side</h3>
                     <p class="text-gray-600 mt-2 text-base sm:text-lg">
                         <a href="tel:+919494547989" class="hover:text-maroon transition-colors">+91 94945 47989</a>
                     </p>
-                    <p class="text-gray-500 text-xs sm:text-sm" data-en="Mr. Satyanarayana" data-te="శ్రీ సత్యనారాయణ">Mr. Satyanarayana</p>
+                    <p class="text-gray-500 text-xs sm:text-sm" data-en="Mr. Satyanarayana" data-te="శ్రీ సత్యనారాయణ">
+                        Mr. Satyanarayana</p>
                 </div>
                 <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6">
                     <span class="text-2xl sm:text-3xl">📞</span>
-                    <h3 class="font-semibold text-maroon mt-2 text-sm sm:text-base" data-en="Bride's Side" data-te="వధువు వైపు">Bride's Side</h3>
+                    <h3 class="font-semibold text-maroon mt-2 text-sm sm:text-base" data-en="Bride's Side"
+                        data-te="వధువు వైపు">Bride's Side</h3>
                     <p class="text-gray-600 mt-2 text-base sm:text-lg">
                         <a href="tel:+917207345939" class="hover:text-maroon transition-colors">+91 72073 45939</a>
                     </p>
-                    <p class="text-gray-500 text-xs sm:text-sm" data-en="Mr. Krishnamurthy" data-te="శ్రీ కృష్ణమూర్తి">Mr. Krishnamurthy</p>
+                    <p class="text-gray-500 text-xs sm:text-sm" data-en="Mr. Krishnamurthy" data-te="శ్రీ కృష్ణమూర్తి">
+                        Mr. Krishnamurthy</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-b from-maroon-dark via-maroon-dark to-black text-white py-12 sm:py-16 md:py-20 px-3 sm:px-4 text-center relative overflow-hidden">
+    <footer
+        class="bg-gradient-to-b from-maroon-dark via-maroon-dark to-black text-white py-12 sm:py-16 md:py-20 px-3 sm:px-4 text-center relative overflow-hidden">
         <!-- Decorative Background -->
         <div class="absolute inset-0 opacity-5">
             <div class="absolute top-0 left-1/4 text-9xl">✦</div>
@@ -646,10 +905,12 @@
                 <span class="text-gold text-2xl sparkle">💍</span>
                 <div class="h-px bg-gradient-to-l from-transparent to-gold w-16 sm:w-24"></div>
             </div>
-            <p class="text-xl sm:text-2xl md:text-3xl font-display text-gold-light mb-3" data-en="With Love & Best Wishes" data-te="ప్రేమ & శుభాకాంక్షలతో">
+            <p class="text-xl sm:text-2xl md:text-3xl font-display text-gold-light mb-3"
+                data-en="With Love & Best Wishes" data-te="ప్రేమ & శుభాకాంక్షలతో">
                 With Love & Best Wishes
             </p>
-            <p class="text-gold-light/70 text-sm sm:text-base" data-en="We look forward to celebrating with you!" data-te="మీతో కలిసి జరుపుకోవడానికి ఎదురుచూస్తున్నాము!">
+            <p class="text-gold-light/70 text-sm sm:text-base" data-en="We look forward to celebrating with you!"
+                data-te="మీతో కలిసి జరుపుకోవడానికి ఎదురుచూస్తున్నాము!">
                 We look forward to celebrating with you!
             </p>
             <div class="flex justify-center items-center gap-4 sm:gap-6 mt-6 sm:mt-8 text-2xl sm:text-3xl">
@@ -664,20 +925,7 @@
         </div>
     </footer>
 
-    <!-- Success Modal -->
-    <div id="successModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden p-4">
-        <div class="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 max-w-sm w-full text-center">
-            <span class="text-4xl sm:text-5xl">🎉</span>
-            <h3 class="font-display text-xl sm:text-2xl text-maroon mt-3 sm:mt-4" data-en="Thank You!" data-te="ధన్యవాదాలు!">Thank You!</h3>
-            <p class="text-gray-600 mt-2 text-sm sm:text-base" data-en="Your response has been recorded. We can't wait to celebrate with you!" data-te="మీ స్పందన నమోదు చేయబడింది. మీతో జరుపుకోవడానికి మేము ఎదురుచూస్తున్నాము!">
-                Your response has been recorded. We can't wait to celebrate with you!
-            </p>
-            <button id="closeModal" class="mt-5 sm:mt-6 bg-maroon text-white px-6 sm:px-8 py-2 rounded-full hover:bg-maroon-dark transition-colors text-sm sm:text-base" data-en="Close" data-te="మూసివేయి">
-                Close
-            </button>
-        </div>
-    </div>
-
     <script src="app.js"></script>
 </body>
+
 </html>

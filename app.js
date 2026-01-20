@@ -90,71 +90,6 @@ class CountdownTimer {
         return num.toString().padStart(2, '0');
     }
 }
-class RSVPHandler {
-    constructor() {
-        this.form = document.getElementById('rsvpForm');
-        this.modal = document.getElementById('successModal');
-        this.closeModalBtn = document.getElementById('closeModal');
-        this.rsvpButtons = document.querySelectorAll('.rsvp-btn');
-        this.init();
-    }
-    init() {
-        this.rsvpButtons.forEach((btn) => {
-            btn.addEventListener('click', (e) => this.handleRSVP(e));
-        });
-        this.closeModalBtn?.addEventListener('click', () => this.closeModal());
-        this.modal?.addEventListener('click', (e) => {
-            if (e.target === this.modal)
-                this.closeModal();
-        });
-    }
-    handleRSVP(e) {
-        const button = e.currentTarget;
-        const response = button.dataset.response;
-        const nameInput = this.form?.querySelector('input[type="text"]');
-        const phoneInput = this.form?.querySelector('input[type="tel"]');
-        const guestsSelect = this.form?.querySelector('select');
-        const name = nameInput?.value.trim();
-        const phone = phoneInput?.value.trim();
-        const guests = guestsSelect?.value;
-        if (!name) {
-            this.shakeElement(nameInput);
-            nameInput?.focus();
-            return;
-        }
-        console.log('RSVP Submitted:', {
-            name,
-            phone,
-            guests,
-            response
-        });
-        this.showModal();
-        if (nameInput)
-            nameInput.value = '';
-        if (phoneInput)
-            phoneInput.value = '';
-        if (guestsSelect)
-            guestsSelect.selectedIndex = 0;
-    }
-    showModal() {
-        this.modal?.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-    }
-    closeModal() {
-        this.modal?.classList.add('hidden');
-        document.body.style.overflow = '';
-    }
-    shakeElement(el) {
-        if (!el)
-            return;
-        el.classList.add('shake');
-        el.style.borderColor = '#ff4444';
-        setTimeout(() => {
-            el.classList.remove('shake');
-            el.style.borderColor = '';
-        }, 500);
-    }
-}
 class ScrollAnimator {
     constructor() {
         this.observerOptions = {
@@ -211,14 +146,6 @@ class FloatingParticles {
 function addDynamicStyles() {
     const style = document.createElement('style');
     style.textContent = `
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
-        }
-        .shake {
-            animation: shake 0.3s ease-in-out;
-        }
         .telugu-active {
             font-family: 'Noto Sans Telugu', 'Poppins', sans-serif;
         }
@@ -235,7 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
     addDynamicStyles();
     const langManager = new LanguageManager();
     const countdown = new CountdownTimer('2026-01-28T10:00:00+05:30');
-    const rsvpHandler = new RSVPHandler();
     const scrollAnimator = new ScrollAnimator();
     const particles = new FloatingParticles();
     console.log('🎊 Wedding Invitation App Initialized');
