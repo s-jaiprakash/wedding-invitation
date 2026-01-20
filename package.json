@@ -1,0 +1,24 @@
+{
+  "name": "wedding-invitation",
+  "version": "1.0.0",
+  "description": "A beautiful wedding invitation webpage with English and Telugu language support",
+  "main": "app.js",
+  "scripts": {
+    "build": "tsc && cp src/app.js . && cp index.html dist/ 2>/dev/null || true",
+    "watch": "tsc --watch",
+    "serve": "npx serve .",
+    "deploy": "npm run build"
+  },
+  "keywords": [
+    "wedding",
+    "invitation",
+    "telugu",
+    "andhra-pradesh"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "serve": "^14.2.0"
+  }
+}
