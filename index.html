@@ -21,8 +21,8 @@
                         'gold-dark': '#B8960C',
                         maroon: 'var(--primary)',
                         'maroon-dark': 'var(--primary-dark)',
-                        cream: '#F0FFF4',
-                        'cream-dark': '#E8F5E9',
+                        cream: 'var(--bg-light)',
+                        'cream-dark': 'var(--bg-dark)',
                     },
                     fontFamily: {
                         display: ['Playfair Display', 'serif'],
@@ -42,10 +42,26 @@
         }
     </script>
     <style>
-        /* Theme Colors */
+        /* Theme Colors - Auto-rotating every 30 mins */
         :root {
             --primary: #1B5E20;
             --primary-dark: #0D3D12;
+            --bg-light: #F0FFF4;
+            --bg-dark: #E8F5E9;
+        }
+
+        :root.theme-maroon {
+            --primary: #800020;
+            --primary-dark: #5C0015;
+            --bg-light: #FFF8F0;
+            --bg-dark: #FFE8E0;
+        }
+
+        :root.theme-royal {
+            --primary: #4A148C;
+            --primary-dark: #311B92;
+            --bg-light: #F3E5F5;
+            --bg-dark: #E1BEE7;
         }
 
         /* Base Styles */
@@ -176,10 +192,9 @@
 
         /* Grand Background Pattern */
         .rangoli-pattern {
-            background-color: #F0FFF4;
+            background-color: var(--bg-light);
             background-image:
-                url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.12'%3E%3Cpath d='M40 0L50 10L40 20L30 10L40 0zM0 40L10 50L0 60L-10 50L0 40zM80 40L90 50L80 60L70 50L80 40zM40 80L50 70L40 60L30 70L40 80zM40 40L50 50L40 60L30 50L40 40z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
-                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231B5E20' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.12'%3E%3Cpath d='M40 0L50 10L40 20L30 10L40 0zM0 40L10 50L0 60L-10 50L0 40zM80 40L90 50L80 60L70 50L80 40zM40 80L50 70L40 60L30 70L40 80zM40 40L50 50L40 60L30 50L40 40z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
         /* Animated Background Orbs */
@@ -281,21 +296,24 @@
 
         /* Grand shimmer overlay */
         @keyframes grand-shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
+            0% {
+                background-position: -200% 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
         }
 
         .grand-shimmer-overlay {
             position: fixed;
             inset: 0;
-            background: linear-gradient(
-                90deg,
-                transparent 0%,
-                rgba(212, 175, 55, 0.03) 25%,
-                rgba(255, 255, 255, 0.05) 50%,
-                rgba(212, 175, 55, 0.03) 75%,
-                transparent 100%
-            );
+            background: linear-gradient(90deg,
+                    transparent 0%,
+                    rgba(212, 175, 55, 0.03) 25%,
+                    rgba(255, 255, 255, 0.05) 50%,
+                    rgba(212, 175, 55, 0.03) 75%,
+                    transparent 100%);
             background-size: 200% 100%;
             animation: grand-shimmer 8s linear infinite;
             pointer-events: none;
@@ -304,8 +322,15 @@
 
         /* Glowing border animation */
         @keyframes glow-pulse {
-            0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.3), 0 0 40px rgba(27, 94, 32, 0.2); }
-            50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.5), 0 0 80px rgba(27, 94, 32, 0.3), 0 0 120px rgba(212, 175, 55, 0.2); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.3), 0 0 40px rgba(27, 94, 32, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(212, 175, 55, 0.5), 0 0 80px rgba(27, 94, 32, 0.3), 0 0 120px rgba(212, 175, 55, 0.2);
+            }
         }
 
         .glow-border {
@@ -314,17 +339,42 @@
 
         /* Floating golden dust */
         @keyframes golden-dust {
-            0%, 100% { opacity: 0; transform: translateY(0) scale(0); }
-            10% { opacity: 1; transform: translateY(-10px) scale(1); }
-            90% { opacity: 1; transform: translateY(-100px) scale(0.8); }
-            100% { opacity: 0; transform: translateY(-120px) scale(0); }
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: translateY(0) scale(0);
+            }
+
+            10% {
+                opacity: 1;
+                transform: translateY(-10px) scale(1);
+            }
+
+            90% {
+                opacity: 1;
+                transform: translateY(-100px) scale(0.8);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-120px) scale(0);
+            }
         }
 
         /* Rainbow shimmer for special text */
         @keyframes rainbow-shimmer {
-            0% { filter: hue-rotate(0deg) drop-shadow(0 0 10px rgba(212, 175, 55, 0.5)); }
-            50% { filter: hue-rotate(30deg) drop-shadow(0 0 20px rgba(212, 175, 55, 0.8)); }
-            100% { filter: hue-rotate(0deg) drop-shadow(0 0 10px rgba(212, 175, 55, 0.5)); }
+            0% {
+                filter: hue-rotate(0deg) drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+            }
+
+            50% {
+                filter: hue-rotate(30deg) drop-shadow(0 0 20px rgba(212, 175, 55, 0.8));
+            }
+
+            100% {
+                filter: hue-rotate(0deg) drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+            }
         }
 
         .rainbow-glow {
@@ -333,14 +383,106 @@
 
         /* Pulsing celebration effect */
         @keyframes celebrate-pulse {
-            0%, 100% { transform: scale(1); }
-            25% { transform: scale(1.02); }
-            50% { transform: scale(1); }
-            75% { transform: scale(1.01); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.02);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            75% {
+                transform: scale(1.01);
+            }
         }
 
         .celebrate-pulse {
             animation: celebrate-pulse 4s ease-in-out infinite;
+        }
+
+        /* Handwriting/Pen Writing Effect */
+        @keyframes pen-cursor-blink {
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .story-text {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.8;
+        }
+
+        .story-container {
+            position: relative;
+            text-align: left;
+        }
+
+        .pen-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.2em;
+            background: linear-gradient(to bottom, var(--primary), #D4AF37);
+            margin-left: 2px;
+            animation: pen-cursor-blink 0.8s infinite;
+            vertical-align: text-bottom;
+            border-radius: 1px;
+            box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+        }
+
+        .pen-icon {
+            position: absolute;
+            font-size: 1.5rem;
+            transform: rotate(-45deg);
+            transition: all 0.1s ease;
+            filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+        }
+
+        .story-line {
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.5s ease;
+        }
+
+        .story-line.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .story-char {
+            opacity: 0;
+            display: inline;
+        }
+
+        .story-char.visible {
+            opacity: 1;
+        }
+
+        /* Paper texture effect */
+        .paper-texture {
+            background: linear-gradient(to bottom,
+                    transparent 0%,
+                    rgba(212, 175, 55, 0.03) 50%,
+                    transparent 100%);
+            background-size: 100% 3em;
+        }
+
+        /* Ink effect on text */
+        .ink-text {
+            color: #2C3E50;
+            text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.1);
         }
 
         /* Ornate Frame */
@@ -547,7 +689,7 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: #F0FFF4;
+            background: var(--bg-light);
         }
 
         ::-webkit-scrollbar-thumb {
@@ -895,37 +1037,24 @@
                 </h2>
             </div>
 
-            <div class="grand-card rounded-2xl sm:rounded-3xl p-6 xs:p-8 sm:p-10 md:p-14 border border-gold/20">
+            <div
+                class="grand-card rounded-2xl sm:rounded-3xl p-6 xs:p-8 sm:p-10 md:p-14 border border-gold/20 paper-texture">
                 <div class="flex justify-center gap-4 mb-5 sm:mb-8">
-                    <span class="text-4xl sm:text-5xl sparkle">💕</span>
+                    <span class="text-4xl sm:text-5xl sparkle">✍️</span>
                 </div>
-                <p class="text-gold-dark italic text-base sm:text-lg md:text-xl mb-6 font-display" data-en="\" Sometimes
-                    the best things are arranged first and loved later...\"" data-te="\" కొన్నిసార్లు ఉత్తమ విషయాలు
-                    ముందుగా ఏర్పాటు చేయబడి తర్వాత ప్రేమించబడతాయి...\"">"Sometimes the best things are arranged first and
-                    loved later..."</p>
-                <p class="text-gray-600 leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl"
-                    data-en="Once upon a time, my family, her family, and destiny had a meeting—and I was informed of the decision later 😄. It was an arranged marriage, simple and straightforward. We met politely, spoke carefully, and smiled awkwardly. Then I noticed her cuteness and innocence, and just like that, the arrangement started to feel perfect. Two souls brought together by our families and fate. With everyone's blessings, I'm now getting married to a beautiful woman—proof that sometimes the best things are arranged first and loved later. ❤️"
-                    data-te="మా కుటుంబాల ఆశీర్వాదాలతో,
-ఒక అందమైన అరేంజ్డ్ మ్యారేజ్ ద్వారా
-మా జీవితాల కొత్త అధ్యాయం మొదలవుతోంది.
+                <p class="text-gold-dark italic text-base sm:text-lg md:text-xl mb-6 font-display text-center"
+                    data-en="&quot;Sometimes the best things are arranged first and loved later...&quot;"
+                    data-te="&quot;ముందుగా కుటుంబాల నిర్ణయం, తరువాత హృదయాల అనుబంధం...&quot;">"Sometimes the best things
+                    are arranged first and loved later..."</p>
 
-మేము కలిసాం, మాట్లాడాం,
-ఆమె క్యూట్‌నెస్‌, అమాయకత్వం నచ్చాయి,
-అలా ఈ బంధం సహజంగా ముందుకు సాగింది.
+                <!-- Handwriting Story Container -->
+                <div id="storyContainer"
+                    class="story-container ink-text text-sm sm:text-base md:text-lg leading-relaxed">
+                    <span id="penIcon" class="pen-icon hidden">🖊️</span>
+                    <div id="storyContent" class="story-text"></div>
+                    <span id="penCursor" class="pen-cursor"></span>
+                </div>
 
-అందరి ఆశీర్వాదాలతో
-ఇప్పుడు మా పెళ్లి జరగబోతోంది.
-ఈ ఆనందక్షణంలో మీరు కూడా భాగస్వాములు కావాలని కోరుకుంటున్నాం.
-">
-                    Once upon a time, my family, her family, and destiny had a meeting—and I was informed of the
-                    decision later 😄.<br><br>
-                    It was an arranged marriage, simple and straightforward. We met politely, spoke carefully, and
-                    smiled awkwardly. Then I noticed her <strong class="text-maroon">cuteness and innocence</strong>,
-                    and just like that, the arrangement started to feel perfect.<br><br>
-                    Two souls brought together by our families and fate. With everyone's blessings, I'm now getting
-                    married to a <strong class="text-maroon">beautiful woman</strong>—proof that sometimes the best
-                    things are arranged first and loved later. ❤️
-                </p>
                 <div class="flex justify-center items-center gap-3 mt-8 sm:mt-10">
                     <div class="h-px bg-gradient-to-r from-transparent to-gold w-8 sm:w-12"></div>
                     <span class="text-gold sparkle">✦</span>
