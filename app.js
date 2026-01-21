@@ -165,7 +165,7 @@ Two souls brought together by our families and fate. With everyone's blessings, 
         this.container = document.getElementById('storyContainer');
         this.content = document.getElementById('storyContent');
         this.cursor = document.getElementById('penCursor');
-        this.currentLang = 'en';
+        this.currentLang = document.documentElement.lang === 'te' ? 'te' : 'en';
         this.isWriting = false;
         this.hasStarted = false;
         this.charIndex = 0;
@@ -196,6 +196,8 @@ Two souls brought together by our families and fate. With everyone's blessings, 
         return this.currentLang === 'te' ? this.storyTE : this.storyEN;
     }
     startWriting() {
+        // Sync language before starting to write
+        this.currentLang = document.documentElement.lang === 'te' ? 'te' : 'en';
         this.isWriting = true;
         this.charIndex = 0;
         this.content.innerHTML = '';
