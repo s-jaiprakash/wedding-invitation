@@ -238,6 +238,8 @@
             pointer-events: none;
             z-index: 0;
             animation: float-orb 8s ease-in-out infinite;
+            will-change: transform;
+            transform: translateZ(0);
         }
 
         .bg-orb-1 {
@@ -318,6 +320,8 @@
             animation: grand-shimmer 8s linear infinite;
             pointer-events: none;
             z-index: 1;
+            will-change: background-position;
+            transform: translateZ(0);
         }
 
         /* Glowing border animation */
