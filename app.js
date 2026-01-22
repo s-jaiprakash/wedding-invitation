@@ -35,7 +35,7 @@ class ThemeRotator {
     }
     getCurrentThemeName() {
         return this.themes[this.currentThemeIndex].charAt(0).toUpperCase() +
-               this.themes[this.currentThemeIndex].slice(1);
+            this.themes[this.currentThemeIndex].slice(1);
     }
     startRotation() {
         // Calculate time until next theme change
@@ -150,17 +150,33 @@ class CountdownTimer {
 }
 class StoryWriter {
     constructor() {
-        this.storyEN = `Once upon a time, my family, her family, and destiny had a meeting—and I was informed of the decision later 😄.
+        //        this.storyEN = `Once upon a time, my family, her family, and destiny had a meeting—and I was informed of the decision later 😄.
 
-It was an arranged marriage, simple and straightforward. We met politely, spoke carefully, and smiled awkwardly. Then I noticed her cuteness and innocence, and just like that, the arrangement started to feel perfect.
+        //It was an arranged marriage, simple and straightforward. We met politely, spoke carefully, and smiled awkwardly. Then I noticed her cuteness and innocence, and just like that, the arrangement started to feel perfect.
 
-Two souls brought together by our families and fate. With everyone's blessings, I'm now getting married to a beautiful woman—proof that sometimes the best things are arranged first and loved later. ❤️`;
+        //Two souls brought together by our families and fate. With everyone's blessings, I'm now getting married to a beautiful woman—proof that sometimes the best things are arranged first and loved later. ❤️`;
 
-        this.storyTE = `మా కుటుంబాల ఆశీర్వాదాలతో, ఒక అందమైన అరేంజ్డ్ మ్యారేజ్ ద్వారా మా జీవితాల కొత్త అధ్యాయం మొదలవుతోంది.
+        //        this.storyTE = `మా కుటుంబాల ఆశీర్వాదాలతో, ఒక అందమైన అరేంజ్డ్ మ్యారేజ్ ద్వారా మా జీవితాల కొత్త అధ్యాయం మొదలవుతోంది.
 
-మేము కలిసాం, మాట్లాడాం, ఆమె క్యూట్‌నెస్‌, అమాయకత్వం నచ్చాయి, అలా ఈ బంధం సహజంగా ముందుకు సాగింది.
+        //మేము కలిసాం, మాట్లాడాం, ఆమె క్యూట్‌నెస్‌, అమాయకత్వం నచ్చాయి, అలా ఈ బంధం సహజంగా ముందుకు సాగింది.
 
-అందరి ఆశీర్వాదాలతో ఇప్పుడు మా పెళ్లి జరగబోతోంది. ఈ ఆనందక్షణంలో మీరు కూడా భాగస్వాములు కావాలని కోరుకుంటున్నాం. ❤️`;
+        //అందరి ఆశీర్వాదాలతో ఇప్పుడు మా పెళ్లి జరగబోతోంది. ఈ ఆనందక్షణంలో మీరు కూడా భాగస్వాములు కావాలని కోరుకుంటున్నాం. ❤️`;
+
+        this.storyEN = `It started with a photo, a few family discussions, and a meeting that felt like the biggest interview of my life! 😅.
+
+It was an arranged match — traditional, neat, and a little nerve-wracking. We sat across from each other, exchanging polite questions and careful smiles, both wondering if this was 'it.' But as we talked, I saw his kindness and a certain warmth that made the nerves disappear. Before I knew it, my shy smiles turned into real ones.
+
+What began as a decision made by our families and fate has become my favorite reality. I’m so happy to be marrying a man who completes me — proving that sometimes, the most beautiful love stories are the ones that are written for you first, and cherished by you forever. 💖✨`;
+
+        this.storyTE = `ఇది ఒక ఫోటోతో మొదలైంది… తర్వాత కుటుంబ చర్చలు… చివరికి నా జీవితంలోనే అతిపెద్ద ఇంటర్వ్యూలా అనిపించిన ఒక మీటింగ్ 😅. అది ఒక అరేంజ్డ్ మ్యారేజ్ — పద్ధతిగా, సింపుల్‌గా, కొంచెం టెన్షన్‌తో....
+
+మేమిద్దరం ఎదురెదురుగా కూర్చుని మాట్లాడుకుంటూ, మధ్య మధ్యలో ఆక్వార్డ్ నవ్వులు…
+మైండ్లో మాత్రం ఇద్దరికీ అదే ప్రశ్న — “ఇదేనా?”
+మాటలు సాగుతున్న కొద్దీ అతనిలోని మంచితనం, ఆ కామ్‌నెస్ నన్ను కంఫర్ట్‌గా ఫీలయ్యేలా చేసింది.
+
+కుటుంబాల నిర్ణయంగా మొదలైన ఈ కథ, ఇప్పుడు నా జీవితంలో నాకు చాలా ఇష్టమైన నిజం.
+నన్ను పూర్తిగా అర్థం చేసుకుని, నన్ను కంప్లీట్ చేసే వ్యక్తిని పెళ్లి చేసుకోబోతున్నందుకు నాకు ఎంతో సంతోషంగా ఉంది.
+అందుకే అంటారు- మ్యారేజెస్ ఆర్ మేడ్ ఇన్ హెవెన్ అని.... 💖✨.`;
 
         this.container = document.getElementById('storyContainer');
         this.content = document.getElementById('storyContent');
