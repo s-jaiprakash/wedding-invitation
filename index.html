@@ -13,42 +13,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Jai Prakash & Tejaswini | Wedding Invitation</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💒</text></svg>">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: '#D4AF37',
-                        'gold-light': '#F4E4BC',
-                        'gold-dark': '#B8960C',
-                        maroon: 'var(--primary)',
-                        'maroon-dark': 'var(--primary-dark)',
-                        cream: 'var(--bg-light)',
-                        'cream-dark': 'var(--bg-dark)',
-                    },
-                    fontFamily: {
-                        display: ['Playfair Display', 'serif'],
-                        body: ['Poppins', 'sans-serif'],
-                        telugu: ['Noto Sans Telugu', 'sans-serif'],
-                    },
-                    screens: {
-                        'xs': '375px',
-                        'sm': '640px',
-                        'md': '768px',
-                        'lg': '1024px',
-                        'xl': '1280px',
-                        '2xl': '1536px',
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         /* Theme Colors - Auto-rotating every 30 mins */
         :root {
@@ -71,6 +42,44 @@
             --bg-light: #F3E5F5;
             --bg-dark: #E1BEE7;
         }
+
+        /* Custom Tailwind-like utility classes */
+        .font-display { font-family: 'Playfair Display', serif !important; }
+        .font-body { font-family: 'Poppins', sans-serif !important; }
+        .font-telugu { font-family: 'Noto Sans Telugu', sans-serif !important; }
+
+        .text-gold { color: #D4AF37 !important; }
+        .text-gold-light { color: #F4E4BC !important; }
+        .text-gold-dark { color: #B8960C !important; }
+        .text-maroon { color: var(--primary) !important; }
+        .text-maroon-dark { color: var(--primary-dark) !important; }
+        .text-cream { color: var(--bg-light) !important; }
+        .text-cream-dark { color: var(--bg-dark) !important; }
+
+        .bg-gold { background-color: #D4AF37 !important; }
+        .bg-gold-light { background-color: #F4E4BC !important; }
+        .bg-gold-dark { background-color: #B8960C !important; }
+        .bg-maroon { background-color: var(--primary) !important; }
+        .bg-maroon-dark { background-color: var(--primary-dark) !important; }
+        .bg-cream { background-color: var(--bg-light) !important; }
+        .bg-cream-dark { background-color: var(--bg-dark) !important; }
+
+        .border-gold { border-color: #D4AF37 !important; }
+        .border-gold-light { border-color: #F4E4BC !important; }
+        .border-maroon { border-color: var(--primary) !important; }
+        .border-cream { border-color: var(--bg-light) !important; }
+
+        .from-gold { --tw-gradient-from: #D4AF37 !important; }
+        .to-gold-dark { --tw-gradient-to: #B8960C !important; }
+        .from-maroon { --tw-gradient-from: var(--primary) !important; }
+        .to-maroon-dark { --tw-gradient-to: var(--primary-dark) !important; }
+        .from-cream { --tw-gradient-from: var(--bg-light) !important; }
+        .to-cream-dark { --tw-gradient-to: var(--bg-dark) !important; }
+
+        /* Gradient utilities */
+        .bg-gradient-to-r { background-image: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to)) !important; }
+        .bg-gradient-to-b { background-image: linear-gradient(to bottom, var(--tw-gradient-from), var(--tw-gradient-to)) !important; }
+        .bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--tw-gradient-from), var(--tw-gradient-to)) !important; }
 
         /* Base Styles */
         * {
@@ -1237,6 +1246,10 @@
             <div class="mt-8 sm:mt-10 pt-6 border-t border-gold/20">
                 <p class="text-gold font-display text-lg sm:text-xl tracking-wider">#JaiPrakashWedsTejaswini</p>
                 <p class="text-gold-light/40 text-xs mt-3">28th & 30th January 2026</p>
+                <div class="mt-4 flex justify-center items-center gap-2">
+                    <span class="text-gold-light/50 text-xs" data-en="Blessed by" data-te="ఆశీర్వదించినవారు">Blessed by</span>
+                    <img src="https://visitor-badge.laobi.icu/badge?page_id=s-jaiprakash.wedding-invitation&left_color=%23800020&right_color=%23D4AF37&left_text=visitors" alt="Visitors" class="h-5 opacity-80 hover:opacity-100 transition-opacity"/>
+                </div>
             </div>
         </div>
     </footer>
